@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
             'email' => 'eduresultchain@gmail.com',
             'username' => 'admin',
             'password' => 'admin123',
-            'avatar' => 'tIIuIFMGtxQaTl3O2OdvxjG3cjkWdFLLchv7Muur.png',
+            'avatar' => null,
             'country_id' => null,
             'role_id' => $admin->id,
             'status' => UserStatus::ACTIVE,
