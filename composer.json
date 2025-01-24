@@ -1,0 +1,98 @@
+{
+    "name": "alaminxpro/eduresultchain-api",
+    "description": "Edu Result Chain API",
+    "keywords": [
+        "advanced",
+        "secure",
+        "login",
+        "user management",
+        "authentication",
+        "authorization",
+        "register"
+    ],
+    "authors": [
+        {
+            "name": "MD. AL AMIN",
+            "email": "alamin@previewon.com",
+            "homepage": "https://www.linkedin.com/in/alaminxpro/",
+            "role": "Developer"
+        }
+    ],
+    "type": "project",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/loshmis/laravel-countries"
+        }
+    ],
+    "require": {
+        "php": "^8.2.0",
+        "ext-json": "*",
+        "akaunting/laravel-setting": "^1.2.9",
+        "anhskohbo/no-captcha": "3.*",
+        "guzzlehttp/guzzle": "^7.2",
+        "intervention/image": "^2.3",
+        "jenssegers/agent": "^2.5",
+        "lab404/laravel-impersonate": "^1.2",
+        "laravel/fortify": "^1.21",
+        "laravel/framework": "^11.0",
+        "laravel/sanctum": "^4.0",
+        "laravel/socialite": "^5.0",
+        "laravel/tinker": "^2.7",
+        "laravel/ui": "^4.0",
+        "proengsoft/laravel-jsvalidation": "^4.0.0",
+        "spatie/laravel-query-builder": "^5.0",
+        "vanguardapp/activity-log": "^6.0",
+        "vanguardapp/announcements": "^6.0",
+        "vanguardapp/plugins": "^6.0",
+        "webpatser/laravel-countries": "dev-master"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.5",
+        "barryvdh/laravel-ide-helper": "^3",
+        "brianium/paratest": "^7.1",
+        "fakerphp/faker": "^1.9.1",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.40",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^8.1",
+        "phpunit/phpunit": "^10.0",
+        "spatie/laravel-ignition": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vanguard\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
