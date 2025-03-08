@@ -22,6 +22,20 @@ class RolesSeeder extends Seeder
         ]);
 
         Role::create([
+            'name' => 'Board',
+            'display_name' => 'Board',
+            'description' => 'Board member.',
+            'removable' => false,
+        ]);
+        
+        Role::create([
+            'name' => 'Institution',
+            'display_name' => 'Institution',
+            'description' => 'Institution member.',
+            'removable' => false,
+        ]);
+
+        Role::create([
             'name' => 'User',
             'display_name' => 'User',
             'description' => 'Default system user.',

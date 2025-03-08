@@ -51,21 +51,27 @@ abstract class ApiController extends Controller
         ]);
     }
 
-    public function errorForbidden(string $message = 'Forbidden'): JsonResponse
+    protected function errorForbidden($message = 'Forbidden'): JsonResponse
     {
         return $this->setStatusCode(Response::HTTP_FORBIDDEN)
             ->respondWithError($message);
     }
 
-    public function errorInternalError(string $message = 'Internal Error'): JsonResponse
+    protected function errorInternalError($message = 'Internal Error'): JsonResponse
     {
         return $this->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR)
             ->respondWithError($message);
     }
 
-    public function errorNotFound(string $message = 'Resource Not Found'): JsonResponse
+    protected function errorNotFound($message = 'Resource Not Found'): JsonResponse
     {
         return $this->setStatusCode(Response::HTTP_NOT_FOUND)
+            ->respondWithError($message);
+    }
+
+    protected function errorBadRequest($message = 'Bad Request'): JsonResponse
+    {
+        return $this->setStatusCode(Response::HTTP_BAD_REQUEST)
             ->respondWithError($message);
     }
 

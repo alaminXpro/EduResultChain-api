@@ -71,4 +71,35 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | IPFS Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This section contains configuration for the IPFS service used to store
+    | and retrieve result data hashes.
+    |
+    */
+    'ipfs' => [
+        'endpoint' => env('IPFS_ENDPOINT', 'http://localhost:5001'),
+        'gateway' => env('IPFS_GATEWAY', 'http://localhost:8080/ipfs/'),
+        'timeout' => env('IPFS_TIMEOUT', 30),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Blockchain Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This section contains configuration for the blockchain service used to
+    | register and verify result hashes.
+    |
+    */
+    'blockchain' => [
+        'endpoint' => env('BLOCKCHAIN_ENDPOINT', 'http://localhost:3000/api'),
+        'network' => env('BLOCKCHAIN_NETWORK', 'testnet'),
+        'contract_address' => env('BLOCKCHAIN_CONTRACT_ADDRESS'),
+        'timeout' => env('BLOCKCHAIN_TIMEOUT', 60),
+    ],
 ];

@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Database\Seeders\RolesSeeder::class);
         $this->call(\Database\Seeders\PermissionsSeeder::class);
         $this->call(\Database\Seeders\UserSeeder::class);
+        $this->call(\Database\Seeders\SubjectSeeder::class);
         $this->call(\Vanguard\Announcements\Database\Seeders\AnnouncementsDatabaseSeeder::class);
 
         Model::reguard();

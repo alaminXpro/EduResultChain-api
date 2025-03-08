@@ -185,6 +185,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Mock Services
+    |--------------------------------------------------------------------------
+    |
+    | This option controls whether to use mock services for local development.
+    | When set to true, the application will use mock implementations of
+    | services like IPFS and phone verification.
+    |
+    */
+    'use_mock_services' => env('USE_MOCK_SERVICES', true),
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -237,11 +249,14 @@ return [
          */
         Vanguard\Providers\AppServiceProvider::class,
         Vanguard\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        // Vanguard\Providers\FortifyServiceProvider::class,
         Vanguard\Providers\EventServiceProvider::class,
         Vanguard\Providers\RouteServiceProvider::class,
         Vanguard\Providers\VanguardServiceProvider::class,
+        
+        /*
+         * Mock Service Provider (for local development)
+         */
+        Vanguard\Providers\MockServiceProvider::class,
     ],
 
     /*
